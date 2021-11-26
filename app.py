@@ -93,3 +93,9 @@ def quadratic(a,b,c):
         x1 = (-b + math.sqrt(d)) / (2 * a)
         x2 = (-b - math.sqrt(d)) / (2 * a)
         return "This equation has two real roots: " + str(x1) + ", " + str(x2)
+
+
+#create a flask route and method to check if a given string is a palindrome
+@app.route('/palindrome/<string:word>')
+def palindrome(word):
+    return str(word == word[::-1])
