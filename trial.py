@@ -82,10 +82,10 @@ def isDivisibleBy22(number):
     else:
         return 'Given number is not divisible by 22'
 
-@app.route('/isDivisibleBy10/<number>')
-def isDivisibleBy10(number):
-    if int(number) % 10 == 0:
-        return 'true'
+@app.route('/divisible/<int:num>')
+def divisible(num):
+    if num % 12 == 0:
+        return '{} is divisible by 12'.format(num)
     else:
-        return 'false'
+        return '{} is not divisible by 12'.format(num)
 
