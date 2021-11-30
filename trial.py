@@ -79,3 +79,16 @@ def palindrome(word):
 def is_even(number):
     return f'{number} is {"even" if number % 2 == 0 else "odd"}'
 
+
+@app.route('/isPrime/<int:num>', methods=['GET'])
+def isPrime(num):
+    if num > 1:
+        for i in range(2, num):
+            if (num % i) == 0:
+                return str(num) + " is not a prime number"
+                break
+        else:
+            return str(num) + " is a prime number"
+    else:
+        return str(num) + " is not a prime number"
+
