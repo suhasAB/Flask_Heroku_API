@@ -87,3 +87,11 @@ def isDivisibleBy22(number):
 
 
 
+
+@app.route('/isZ/<string>')
+def isZ(string):
+    if 'z' in string:
+        return 'True'
+    else:
+        return 'False'
+
