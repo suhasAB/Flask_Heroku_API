@@ -137,3 +137,11 @@ def divisible_by_47(num):
     else:
         return '{} is not divisible by 47'.format(num)
 
+
+@app.route('/divisible/<int:num>')
+def divisible(num):
+    if num % 12 == 0:
+        return '{} is divisible by 12'.format(num)
+    else:
+        return '{} is not divisible by 12'.format(num)
+
