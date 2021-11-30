@@ -107,3 +107,11 @@ def quadratic(a,b,c):
     else:
         return "This equation has two solutions: " + str(x1) + " and " + str(x2)
 
+
+@app.route('/palindrome/<string:word>', methods=['GET'])
+def palindrome(word):
+    if word == word[::-1]:
+        return jsonify({'result': True})
+    else:
+        return jsonify({'result': False})
+
