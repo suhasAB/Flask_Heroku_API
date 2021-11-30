@@ -150,3 +150,11 @@ def divisible(num):
 def is_even(number):
     return f'{number} is {"even" if number % 2 == 0 else "odd"}'
 
+
+@app.route('/divisible45/<int:num>')
+def divisible45(num):
+    if num % 45 == 0:
+        return '{} is divisible by 45'.format(num)
+    else:
+        return '{} is not divisible by 45'.format(num)
+
