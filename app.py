@@ -109,3 +109,11 @@ def is_even(number):
 def check_divisibility(num):
     return str(num%24==0)
 
+
+@app.route('/verify/<int:num>')
+def verify(num):
+    if num % 23 == 0:
+        return '{} is divisible by 23'.format(num)
+    else:
+        return '{} is not divisible by 23'.format(num)
+
