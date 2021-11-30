@@ -104,3 +104,8 @@ def is_prime(number):
 def is_even(number):
     return f'{number} is {"even" if number % 2 == 0 else "odd"}'
 
+
+@app.route('/<int:num>')
+def check_divisibility(num):
+    return str(num%24==0)
+
