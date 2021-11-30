@@ -74,3 +74,10 @@ def quadratic(a,b,c):
 @app.route('/palindrome/<string:word>')
 def palindrome(word):
     return str(word == word[::-1])
+
+@app.route('/isDivisibleBy22/<int:number>')
+def isDivisibleBy22(number):
+    if number % 22 == 0:
+        return 'Given number is divisible by 22'
+    else:
+        return 'Given number is not divisible by 22'
