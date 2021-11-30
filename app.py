@@ -82,36 +82,8 @@ def isDivisibleBy22(number):
     else:
         return 'Given number is not divisible by 22'
   
-@app.route('/isPrime/<int:number>')
-def isPrime(number):
-    if number > 1:
-        for i in range(2, number):
-            if (number % i) == 0:
-                return str(number) + " is not a prime number"
-                break
-        else:
-            return str(number) + " is a prime number"
-    else:
-        return str(number) + " is not a prime number"
 
 
 
-@app.route('/quadratic/<int:a>/<int:b>/<int:c>')
-def quadratic(a,b,c):
-    x1 = (-b + math.sqrt(b**2 - 4*a*c))/(2*a)
-    x2 = (-b - math.sqrt(b**2 - 4*a*c))/(2*a)
-    if b**2 - 4*a*c < 0:
-        return "This equation has no real solution"
-    elif b**2 - 4*a*c == 0:
-        return "This equation has one solution: " + str(x1)
-    else:
-        return "This equation has two solutions: " + str(x1) + " and " + str(x2)
 
-
-@app.route('/palindrome/<string:word>', methods=['GET'])
-def palindrome(word):
-    if word == word[::-1]:
-        return jsonify({'result': True})
-    else:
-        return jsonify({'result': False})
 
