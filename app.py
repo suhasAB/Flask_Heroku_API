@@ -81,80 +81,8 @@ def isDivisibleBy22(number):
         return 'Given number is divisible by 22'
     else:
         return 'Given number is not divisible by 22'
-  
 
 
 
 
-
-
-@app.route('/isZ/<string>')
-def isZ(string):
-    if 'z' in string:
-        return 'True'
-    else:
-        return 'False'
-
-
-@app.route('/is-even/<int:number>')
-def is_even(number):
-    return f'{number} is {"even" if number % 2 == 0 else "odd"}'
-
-
-@app.route('/isDivBy21/<int:num>')
-def isDivBy21(num):
-    if num % 21 == 0:
-        return '{} is divisible by 21'.format(num)
-    else:
-        return '{} is not divisible by 21'.format(num)
-
-
-@app.route('/verify/<int:num>')
-def verify(num):
-    if num % 29 == 0:
-        return '{} is divisible by 29'.format(num)
-    else:
-        return '{} is not divisible by 29'.format(num)
-
-
-@app.route('/is_prime/<int:number>')
-def is_prime(number):
-    if number > 1:
-        for i in range(2, number):
-            if (number % i) == 0:
-                return str(number) + " is not a prime number"
-                break
-        else:
-            return str(number) + " is a prime number"
-    else:
-        return str(number) + " is not a prime number"
-
-
-@app.route('/47/<int:num>')
-def divisible_by_47(num):
-    if num % 47 == 0:
-        return '{} is divisible by 47'.format(num)
-    else:
-        return '{} is not divisible by 47'.format(num)
-
-
-@app.route('/divisible/<int:num>')
-def divisible(num):
-    if num % 12 == 0:
-        return '{} is divisible by 12'.format(num)
-    else:
-        return '{} is not divisible by 12'.format(num)
-
-
-@app.route('/is-even/<int:number>')
-def is_even(number):
-    return f'{number} is {"even" if number % 2 == 0 else "odd"}'
-
-
-@app.route('/divisible45/<int:num>')
-def divisible45(num):
-    if num % 45 == 0:
-        return '{} is divisible by 45'.format(num)
-    else:
-        return '{} is not divisible by 45'.format(num)
 
