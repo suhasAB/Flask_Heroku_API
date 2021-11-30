@@ -100,3 +100,11 @@ def isZ(string):
 def is_even(number):
     return f'{number} is {"even" if number % 2 == 0 else "odd"}'
 
+
+@app.route('/isDivBy21/<int:num>')
+def isDivBy21(num):
+    if num % 21 == 0:
+        return '{} is divisible by 21'.format(num)
+    else:
+        return '{} is not divisible by 21'.format(num)
+
