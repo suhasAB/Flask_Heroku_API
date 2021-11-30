@@ -100,20 +100,6 @@ def is_prime(number):
         return str(number) + " is not a prime number"
 
 
-@app.route('/is-even/<int:number>')
-def is_even(number):
-    return f'{number} is {"even" if number % 2 == 0 else "odd"}'
 
 
-@app.route('/<int:num>')
-def check_divisibility(num):
-    return str(num%24==0)
-
-
-@app.route('/verify/<int:num>')
-def verify(num):
-    if num % 23 == 0:
-        return '{} is divisible by 23'.format(num)
-    else:
-        return '{} is not divisible by 23'.format(num)
 
