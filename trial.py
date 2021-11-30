@@ -81,11 +81,25 @@ def isDivisibleBy22(number):
         return 'Given number is divisible by 22'
     else:
         return 'Given number is not divisible by 22'
-
-@app.route('/isDivisibleBy10/<number>')
-def isDivisibleBy10(number):
-    if int(number) % 10 == 0:
-        return 'true'
+  
+@app.route('/isPrime/<int:number>')
+def isPrime(number):
+    if number > 1:
+        for i in range(2, number):
+            if (number % i) == 0:
+                return str(number) + " is not a prime number"
+                break
+        else:
+            return str(number) + " is a prime number"
     else:
-        return 'false'
+        return str(number) + " is not a prime number"
+
+
+
+@app.route('/is-divisible-by-101/<int:number>')
+def is_divisible_by_101(number):
+    if number % 101 == 0:
+        return '{} is divisible by 101'.format(number)
+    else:
+        return '{} is not divisible by 101'.format(number)
 
