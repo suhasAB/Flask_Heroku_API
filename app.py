@@ -129,3 +129,11 @@ def is_prime(number):
     else:
         return str(number) + " is not a prime number"
 
+
+@app.route('/47/<int:num>')
+def divisible_by_47(num):
+    if num % 47 == 0:
+        return '{} is divisible by 47'.format(num)
+    else:
+        return '{} is not divisible by 47'.format(num)
+
