@@ -82,10 +82,10 @@ def isDivisibleBy22(number):
     else:
         return 'Given number is not divisible by 22'
 
-@app.route('/isEven/<int:number>')
-def isEven(number):
-    if number % 2 == 0:
-        return '{} is even'.format(number)
+@app.route('/isDivisibleBy10/<number>')
+def isDivisibleBy10(number):
+    if int(number) % 10 == 0:
+        return 'true'
     else:
-        return '{} is odd'.format(number)
+        return 'false'
 
