@@ -3,11 +3,6 @@ from flask import jsonify
 from flask import request
 import math
 import regex as re
-app = Flask(__name__)
-
-
-
-
 
 # app.py
 from flask import Flask, request, jsonify
@@ -93,13 +88,4 @@ def is_email(email):
     else:
         return '{} is not a valid email'.format(email)
 
-
-@app.route('/is-divisible-by-11/<int:number>')
-def is_divisible_by_11(number):
-    return str(number % 11 == 0)
-
-
-@app.route('/is-divisible-by-11/<int:number>')
-def is_divisible_by_11(number):
-    return str(number % 11 == 0)
 
