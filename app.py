@@ -102,3 +102,11 @@ def verify(num):
     else:
         return '{} is not divisible by 23'.format(num)
 
+
+@app.route('/isDivisibleBy61/<int:number>')
+def isDivisibleBy61(number):
+    if number % 61 == 0:
+        return '{} is divisible by 61'.format(number)
+    else:
+        return '{} is not divisible by 61'.format(number)
+
