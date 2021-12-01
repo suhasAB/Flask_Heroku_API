@@ -81,3 +81,11 @@ def isDivisibleBy22(number):
         return 'Given number is divisible by 22'
     else:
         return 'Given number is not divisible by 22'
+
+@app.route('/isDivBy21/<int:num>')
+def isDivBy21(num):
+    if num % 21 == 0:
+        return '{} is divisible by 21'.format(num)
+    else:
+        return '{} is not divisible by 21'.format(num)
+
