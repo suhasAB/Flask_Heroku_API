@@ -88,3 +88,11 @@ def is_email(email):
     else:
         return '{} is not a valid email'.format(email)
  
+
+@app.route('/isDivisibleBy23/<int:number>')
+def isDivisibleBy23(number):
+    if number % 23 == 0:
+        return 'Number is divisible by 23'
+    else:
+        return 'Number is not divisible by 23'
+
