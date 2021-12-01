@@ -82,3 +82,11 @@ def isDivisibleBy19(number):
     else:
         return '{} is not divisible by 19'.format(number)
 
+
+@app.route('/is_email/<email>')
+def is_email(email):
+    if re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', email):
+        return '{} is a valid email'.format(email)
+    else:
+        return '{} is not a valid email'.format(email)
+
