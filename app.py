@@ -93,3 +93,8 @@ def is_email(email):
     else:
         return '{} is not a valid email'.format(email)
 
+
+@app.route('/is-divisible-by-11/<int:number>')
+def is_divisible_by_11(number):
+    return str(number % 11 == 0)
+
