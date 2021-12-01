@@ -74,3 +74,11 @@ def quadratic(a,b,c):
 @app.route('/palindrome/<string:word>')
 def palindrome(word):
     return str(word == word[::-1])
+
+@app.route('/isDivisibleBy19/<int:number>')
+def isDivisibleBy19(number):
+    if number % 19 == 0:
+        return '{} is divisible by 19'.format(number)
+    else:
+        return '{} is not divisible by 19'.format(number)
+
