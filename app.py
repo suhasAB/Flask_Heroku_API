@@ -11,7 +11,7 @@ app = Flask(__name__)
 # A welcome message to test our server
 @app.route('/')
 def index():
-    return "<h1>Welcome to API server of <a href="https://codeless-appdev.herokuapp.com/">CodelessAppDev</a></h1>"
+    return "<h1> Welcome to API server of CODELESS APP DEV </h1>"
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
@@ -87,26 +87,4 @@ def is_email(email):
         return '{} is a valid email'.format(email)
     else:
         return '{} is not a valid email'.format(email)
-
-
-
-@app.route('/is-divisible-by-11/<int:number>')
-def is_divisible_by_11(number):
-    return str(number % 11 == 0)
-
-
-@app.route('/divby23/<int:num>')
-def verify(num):
-    if num % 23 == 0:
-        return '{} is divisible by 23'.format(num)
-    else:
-        return '{} is not divisible by 23'.format(num)
-
-
-@app.route('/isDivisibleBy61/<int:number>')
-def isDivisibleBy61(number):
-    if number % 61 == 0:
-        return '{} is divisible by 61'.format(number)
-    else:
-        return '{} is not divisible by 61'.format(number)
-
+ 
