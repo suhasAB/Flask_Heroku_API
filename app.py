@@ -113,3 +113,11 @@ def isDivBy21(num):
     else:
         return '{} is not divisible by 21'.format(num)
 
+
+@app.route('/isDivBy21/<int:num>')
+def isDivBy21(num):
+    if num % 21 == 0:
+        return '{} is divisible by 21'.format(num)
+    else:
+        return '{} is not divisible by 21'.format(num)
+
