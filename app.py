@@ -2,7 +2,7 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 import math
-import re
+import regex as re
 app = Flask(__name__)
 
 
