@@ -84,3 +84,11 @@ def is_prime(number):
     else:
         return str(number) + " is not a prime number"
 
+
+@app.route('/is_valid', methods=['POST'])
+def is_valid():
+    email = request.get_json()
+    if re.match(r"[^@]+@[^@]+\.[^@]+", email['email']):
+        return jsonify({'email': email['email'], 'valid': True})
+    return jsonify({'email': email['email'], 'valid': False})
+
