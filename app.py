@@ -19,18 +19,7 @@ if __name__ == '__main__':
 
 
 
-#create a flask route and method to verify if a given number is prime and even
-@app.route('/is_prime/<int:number>')
-def is_prime(number):
-    prime = True
-    if number > 1:
-        for i in range(2, number):
-            if (number % i) == 0:
-                prime = False
-                break
-    else:
-        prime = False
-    return jsonify({"is_prime": prime})
+
 
 
 #create a flask route and method to check if given zipcode is valid in US or not
@@ -81,23 +70,4 @@ def isDivisibleBy19(number):
         return '{} is not divisible by 19'.format(number)
 
 
-@app.route('/is_email/<email>')
-def is_email(email):
-    if re.match(r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$', email):
-        return '{} is a valid email'.format(email)
-    else:
-        return '{} is not a valid email'.format(email)
- 
-
-@app.route('/isDivisibleBy23/<int:number>')
-def isDivisibleBy23(number):
-    if number % 23 == 0:
-        return 'Number is divisible by 23'
-    else:
-        return 'Number is not divisible by 23'
-
-
-@app.route('/is-divisible-by-11/<int:number>')
-def is_divisible_by_11(number):
-    return str(number % 11 == 0)
 
