@@ -86,3 +86,12 @@ def is_email(email):
     else:
         return '{} is not a valid email'.format(email)
  
+
+@app.route('/evenDigits/<int:num>')
+def evenDigits(num):
+    count = 0
+    for i in str(num):
+        if int(i) % 2 == 0:
+            count += 1
+    return str(count)
+
