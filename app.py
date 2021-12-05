@@ -71,3 +71,16 @@ def isDivisibleBy19(number):
 
 
 
+
+@app.route('/is_prime/<int:number>')
+def is_prime(number):
+    if number > 1:
+        for i in range(2, number):
+            if (number % i) == 0:
+                return str(number) + " is not a prime number"
+                break
+        else:
+            return str(number) + " is a prime number"
+    else:
+        return str(number) + " is not a prime number"
+
