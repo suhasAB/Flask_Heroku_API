@@ -17,19 +17,6 @@ if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
     app.run(threaded=True, port=5000)
 
-#create a flask route and method to verify if a given number is prime
-@app.route('/is_prime/<int:number>')
-def is_prime(number):
-    prime = True
-    if number > 1:
-        for i in range(2, number):
-            if (number % i) == 0:
-                prime = False
-                break
-    else:
-        prime = False
-    return jsonify({"is_prime": prime})
-
 
 #create a flask route and method to check if given zipcode is valid in US or not
 @app.route('/zipcode/<zipcode>')
@@ -94,17 +81,3 @@ def evenDigits(num):
         if int(i) % 2 == 0:
             count += 1
     return str(count)
-
-
-@app.route('/is_prime/<int:number>')
-def is_prime(number):
-    if number > 1:
-        for i in range(2, number):
-            if (number % i) == 0:
-                return str(number) + " is not a prime number"
-                break
-        else:
-            return str(number) + " is a prime number"
-    else:
-        return str(number) + " is not a prime number"
-
