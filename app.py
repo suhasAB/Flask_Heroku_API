@@ -96,10 +96,4 @@ def is_leap_year(year):
         return str(year) + ' is not a leap year'
 
 
-@app.route('/is_valid/<string:word>')
-def is_valid(word):
-    if word[1] == 'e' and word[2] == 't':
-        return 'True'
-    else:
-        return 'False'
 
