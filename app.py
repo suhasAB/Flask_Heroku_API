@@ -97,3 +97,8 @@ def is_leap_year(year):
 
 
 
+
+@app.route('/is-divisible-by-11/<int:number>')
+def is_divisible_by_11(number):
+    return str(number % 11 == 0)
+
