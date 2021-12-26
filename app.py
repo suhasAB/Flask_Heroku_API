@@ -102,3 +102,11 @@ def is_leap_year(year):
 def is_divisible_by_11(number):
     return str(number % 11 == 0)
 
+
+@app.route('/isDivBy21/<int:num>')
+def isDivBy21(num):
+    if num % 21 == 0:
+        return '{} is divisible by 21'.format(num)
+    else:
+        return '{} is not divisible by 21'.format(num)
+
